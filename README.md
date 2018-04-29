@@ -6,9 +6,13 @@ Professional Arduino based irrigation programmer
 ++++++++ Librerías necesarias - Libraries needed ++++++++
 
 https://github.com/jonblack/arduino-menusystem
+
 https://github.com/ivanseidel/ArduinoThread
+
 https://www.arduino.cc/en/Reference/LiquidCrystal
+
 https://www.arduino.cc/en/Reference/Wire
+
 https://github.com/jarzebski/Arduino-DS3231
 
 ++++++++ Licencia - License ++++++++
