@@ -3,6 +3,14 @@ www.dezatec.es
 
 Professional Arduino based irrigation programmer
 
+++++++++ Librerías necesarias - Libraries needed ++++++++
+
+https://github.com/jonblack/arduino-menusystem
+https://github.com/ivanseidel/ArduinoThread
+https://www.arduino.cc/en/Reference/LiquidCrystal
+https://www.arduino.cc/en/Reference/Wire
+https://github.com/jarzebski/Arduino-DS3231
+
 ++++++++ Licencia - License ++++++++
 
 Este trabajo está bajo la licencia Attribution-NonCommercial 4.0 International de Creative Commons. Para ver una copia de esta licencia visite http://creativecommons.org/licenses/by-nc/4.0/ o envíe una carta a Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
