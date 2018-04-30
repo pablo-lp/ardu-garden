@@ -5,7 +5,7 @@ Professional Arduino based irrigation programmer
 
 ++++++++ Librerías necesarias - Libraries needed ++++++++
 
-https://github.com/jonblack/arduino-menusystem
+https://github.com/jonblack/arduino-menusystem/releases/tag/2.1.1
 
 https://github.com/ivanseidel/ArduinoThread
 
