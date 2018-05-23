@@ -28,8 +28,7 @@
 #define YEAR_MONTHS 12 // Number of months in a year
 
 #define MAX_PIN_NUMBER 35 // Maximum config pin number to set
-#define DINAMIC_ED_POINTER 0 // Dinamic pointer to increase EEPROM life
-#define FIRST_EEPROM_POS 2 // First EEPROM pos to write data
+#define FIRST_EEPROM_POS 1 // First EEPROM pos to write data (0 Reserved to flag)
 #define EXTERNAL_TRIGGER 0 // Analogic PIN input (1-5, 0 Not used)
 
 // Keypad buttons identification

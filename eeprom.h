@@ -13,12 +13,9 @@
 
 #include <EEPROM.h>
 
-//TODO: Better memory management, sometimes seems to fail reading settings
-
 // Config data model
 struct ArduGarden {
     bool sistemaEncendido;
-    int espacioConfig;
     int sensorLluvia;
     int temperaturaMinima;
     int tiempoRiego[NUM_VALVES];
@@ -34,7 +31,6 @@ ArduGarden arduGardenSettings = {
     false,
     0,
     0,
-    0,
     { 0, 0, 0, 0, 0, 0, 0, 0 },
     { 0, 0, 0, 0, 0 },
     { 0, 0, 0, 0, 0 },
@@ -45,26 +41,19 @@ ArduGarden arduGardenSettings = {
 
 void writeParams(unsigned int pointer){ // Dinamic data alocation extends EEPROM life
 
-    if (pointer == 0) pointer = EEPROM.read(DINAMIC_ED_POINTER);
-    unsigned int nextPointerPos = pointer + arduGardenSettings.espacioConfig;
     unsigned int dataSize = sizeof(arduGardenSettings);
-    arduGardenSettings.espacioConfig = dataSize;
-    
-    if ((nextPointerPos + dataSize) > EEPROM.length()) nextPointerPos = FIRST_EEPROM_POS;
-    
-    EEPROM.put(DINAMIC_ED_POINTER, nextPointerPos);
-    EEPROM.put(nextPointerPos, arduGardenSettings);
+
+    EEPROM.write(0, 1); // Data saved flag
+    EEPROM.put(FIRST_EEPROM_POS, arduGardenSettings);
     
     lcd.clear();
     lcd.home();
     lcd.print(STR_CONFIG_SAVED);
     lcd.setCursor(0,1);
-    lcd.print(String(dataSize) + "Bytes, Pos " + String(nextPointerPos));
+    lcd.print(String(dataSize) + "Bytes, Pos " + String(FIRST_EEPROM_POS));
     delay(1500);
 }
 
 void readParams(){
-    unsigned int dataPointer = EEPROM.read(DINAMIC_ED_POINTER); // Read data position in eeprom
-    if (dataPointer > 0) EEPROM.get(dataPointer, arduGardenSettings); // Store in data model
-    else writeParams(FIRST_EEPROM_POS); // Write default values
+    if (EEPROM.read(0) == 1) EEPROM.get(FIRST_EEPROM_POS, arduGardenSettings); // Store in data model
 }
