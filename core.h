@@ -137,12 +137,13 @@ void sequentialIrrigation(unsigned long seconds){
 
     for(unsigned int v = 0; v < NUM_VALVES; v++){
 
-        if (arduGardenSettings.valvulas[v] == 0 || arduGardenSettings.tiempoRiego[v] == 0) continue; // Zone not active/configured
+        if (arduGardenSettings.valvulas[v] == 0) continue; // Zone not active/configured
 
         int numMes = (int (mes-1) < 0)? 11:(mes-1);
         int numDia = (int (diaSemana-1) < 0)? 6:(diaSemana-1);
-        
-        unsigned long valveSeconds = (seconds > 0)? seconds:((arduGardenSettings.tiempoRiego[v] * 60) * arduGardenSettings.estacion[numMes]) / 100;
+
+        unsigned long savedTimeOn = (arduGardenSettings.tiempoRiego[v] * 60);
+        unsigned long valveSeconds = (seconds > 0)? seconds:(savedTimeOn * arduGardenSettings.estacion[numMes]) / 100;
 
         if (valveSeconds > 0){
             unsigned long seconds_elapsed;
@@ -238,7 +239,7 @@ void readKeypad(){
     }
 }
 
-void updateTime() { // Runs every 100ms
+void updateTime() { // Runs every 200ms
 
     updateRainSensorState();
 
