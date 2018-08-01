@@ -1,5 +1,7 @@
 # ardu-garden
-www.dezatec.es
+
+Página del proyecto - Proyect page
+https://dezatec.es/utilidades/ardu-garden-pro/
 
 Professional Arduino based irrigation programmer
 
