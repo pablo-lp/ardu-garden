@@ -1,21 +1,16 @@
 # ardu-garden
 
 Página del proyecto - Proyect page
+
 https://dezatec.es/utilidades/ardu-garden-pro/
 
 Professional Arduino based irrigation programmer
 
 ++++++++ Librerías necesarias - Libraries needed ++++++++
 
-https://github.com/jonblack/arduino-menusystem/releases/tag/2.1.1
+Incluídas dentro de la carpeta Dependencies
 
-https://github.com/ivanseidel/ArduinoThread
-
-https://www.arduino.cc/en/Reference/LiquidCrystal
-
-https://www.arduino.cc/en/Reference/Wire
-
-https://github.com/jarzebski/Arduino-DS3231
+Included in the folder Dependencies
 
 ++++++++ Licencia - License ++++++++
 
