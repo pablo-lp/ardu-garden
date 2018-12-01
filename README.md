@@ -1,31 +1,37 @@
-# ardu-garden
+Ardu-Garden Pro - Programador de riego profesional basado en Arduino
 
-Página del proyecto - Proyect page
+# Componentes necesarios
 
-https://dezatec.es/utilidades/ardu-garden-pro/
+Ver en: http://dezatec.es/ardu-garden-pro
 
-Professional Arduino based irrigation programmer
+# Instalación
 
-++++++++ Librerías necesarias - Libraries needed ++++++++
+1 - Añadimos las librerías que están dentro de "Dependencies" a nuestro software Arduino, para evitar errores se aconseja usar las versiones incluídas que ya están testeadas. Después podemos eliminar esta carpeta.
 
-Incluídas dentro de la carpeta Dependencies
+2 - Abrimos el sketch con nuestro software Arduino
 
-Included in the folder Dependencies
+3 - Compilamos y lo subimos a nuestra placa (Probado solo con Arduino Uno)
 
-++++++++ Licencia - License ++++++++
+# ¿Como usarlo?
+
+Para poder poner en marcha el controlador de riego todos los componentes indicados deben estar correctamente conectados. Si no se encuentra el reloj RTC el skecth no se iniciará.
+
+Conectar la corriente al módulo y configurarlo mediante los menús. Si las teclas no responden deberemos ajustar los valores de cada una en el fichero core.h dentro del método read_LCD_buttons() en la línea 81. Podemos imprimir la variable adc_key_in en el display para saber el valor de la tecla pulsada:
+
+    lcd.setCursor(0,1);
+    lcd.print(adc_key_in);
+    delay(5000);
+
+Para hacer una prueba puedes activar el "Encendido manual", se iniciará una sequencia de riego con las válvulas configuradas y durante el tiempo máximo indicado para cada una de ellas.
+
+# Licencia
 
 Este trabajo está bajo la licencia Attribution-NonCommercial 4.0 International de Creative Commons. Para ver una copia de esta licencia visite http://creativecommons.org/licenses/by-nc/4.0/ o envíe una carta a Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
-
-++++++++ Problemas conocidos - Know problems ++++++++
+# Problemas conocidos
 
 Las variables globales de este sketch ocupan un 77% de la memoria dinámica disponible en Arduino Uno, lo que puede causar problemas de estabilidad. Si tiene problemas de este tipo puede solucionarlo fácilmente eliminando el idioma que no use del fichero lang.h
 
-Global variables of this sketch takes 77% of the available dynamic memory in Arduino Uno, which can cause stability problems. If you have problems of this type you can easily solve it by removing the language that does not use the file lang.h
-
-++++++++ Exención de responsabilidad - Disclaimer ++++++++
+# Exención de responsabilidad
 
 El software se proporciona "tal cual", sin garantías explícitas ni implícitas de ningún tipo, incluyendo, entre otras, garantías de comerciabilidad, idoneidad para un determinado fin, título y ausencia de infracción. Ni los propietarios de copyright ni los que distribuyan el software serán responsables en ningún caso de ningún daño ni de cualquier otra responsabilidad, ya sea por contrato, por litigio, como de cualquier otro tipo, que pudieran surgir de, o en conexión con el software o el uso u otros tratos del software.
-
-The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and non infringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
