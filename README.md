@@ -2,6 +2,8 @@
 
 Programador de riego profesional basado en Arduino
 
+English: https://github.com/pablo-lp/ardu-garden/blob/master/README-ENGLISH.md
+
 # Componentes necesarios
 
 Ver en: http://dezatec.es/ardu-garden-pro
