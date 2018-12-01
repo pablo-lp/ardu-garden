@@ -1,4 +1,6 @@
-Ardu-Garden Pro - Programador de riego profesional basado en Arduino
+![alt text](http://dezatec.es/wp-content/uploads/2018/12/logo-300x60.png)
+
+Programador de riego profesional basado en Arduino
 
 # Componentes necesarios
 
