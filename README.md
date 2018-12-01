@@ -1,4 +1,4 @@
-![alt text](http://dezatec.es/wp-content/uploads/2018/12/logo-300x60.png)
+![alt text](http://dezatec.es/wp-content/uploads/2018/12/ardu-garden.png)
 
 Programador de riego profesional basado en Arduino
 
