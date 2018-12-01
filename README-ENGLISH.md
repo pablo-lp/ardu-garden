@@ -18,9 +18,9 @@ To be able to start the irrigation controller, all the indicated components must
 
 Connect power to the module and configure it through the menus. If the keys do not respond we must adjust the values of each one in the core.h file inside the read_LCD_buttons() method on line 81. We can print the variable adc_key_in on the display to know the value of the key pressed:
 
-     lcd.setCursor (0,1);
-     lcd.print (adc_key_in);
-     delay (5000);
+     lcd.setCursor (0,1);
+     lcd.print (adc_key_in);
+     delay (5000);
 
 To make a test you can activate the "Manual ignition", it will start a sequence of irrigation with the valves configured and during the maximum time indicated for each of them.
 
