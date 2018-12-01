@@ -2,6 +2,8 @@
 
 Professional Arduino based irrigation programmer
 
+Español: https://github.com/pablo-lp/ardu-garden/blob/master/README.md
+
 # Required components
 
 See in: http://dezatec.es/ardu-garden-pro
