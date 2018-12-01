@@ -1,4 +1,6 @@
-Ardu-Garden Pro - Professional Arduino based irrigation programmer
+![alt text](http://dezatec.es/wp-content/uploads/2018/12/ardu-garden.png)
+
+Professional Arduino based irrigation programmer
 
 # Required components
 
